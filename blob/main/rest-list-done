@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 156
+Server: Werkzeug/2.0.1 Python/3.9.5
+Date: Tue, 17 Feb 2026 19:45:12 GMT
+
+[
+  {
+    "address": "123 Main St",
+    "date_joined": "2026-02-17",
+    "email": "john@example.com",
+    "id": 1,
+    "name": "John Doe",
+    "phone_number": "555-1234"
+  }
+]
