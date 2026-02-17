@@ -1,0 +1,26 @@
+name: Python Package
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # We install the tools directly here instead of using -r
+          pip install nose flake8 
+
+      - name: Run unit tests with nosetests
+        run: nosetests
+
+      - name: Run linting with flake8
+        run: flake8
