@@ -8,7 +8,8 @@ Step: Set up job
 Step: Checkout
   Syncing repository: prasanthi95/accounts-microservice
   Finish: Checkout ✅
-
+- name: Run unit tests with nosetests
+        run: nosetests --with-spec --with-coverage --cover-package=service
 Step: Set up Python
   Version: 3.9
   Finish: Set up Python ✅
