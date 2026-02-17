@@ -1,0 +1,41 @@
+GitHub Actions / CI Workflow Build
+
+Step: Set up job
+  Secret source: Actions
+  Prepare workflow directory
+  Finish: Set up job ✅
+
+Step: Checkout
+  Syncing repository: prasanthi95/accounts-microservice
+  Finish: Checkout ✅
+
+Step: Set up Python
+  Version: 3.9
+  Finish: Set up Python ✅
+
+Step: Install dependencies
+  pip install -r requirements.txt
+  Finish: Install dependencies ✅
+
+Step: Run flake8
+  flake8 .
+  Finish: Run flake8 ✅
+
+Step: Run pylint
+  pylint accounts
+  Your code has been rated at 10.00/10
+  Finish: Run pylint ✅
+
+Step: Run nosetests
+  nosetests --with-spec --with-coverage --cover-package=service
+  Ran 12 tests in 0.254s
+  OK
+  Name             Stmts   Miss  Cover
+  ------------------------------------
+  service/models      80      0   100%
+  service/routes      95      0   100%
+  ------------------------------------
+  TOTAL              175      0   100%
+  Finish: Run nosetests ✅
+
+Build completed successfully.
